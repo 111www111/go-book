@@ -53,3 +53,15 @@ func GetErrorMsgResult(msg string) model.Result {
 		Data:   nil,
 	}
 }
+
+/*
+GetCheckErrorResult
+参数为空的异常
+*/
+func GetCheckErrorResult() model.Result {
+	return model.Result{
+		Status: false,
+		Msg:    "关键参数为空",
+		Data:   nil,
+	}
+}

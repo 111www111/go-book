@@ -1,13 +1,12 @@
 package controller
 
 import (
+	"books/config"
 	"books/util"
 	"github.com/gin-gonic/gin"
-	"net/http"
 )
 
 func HelloController(c *gin.Context) {
-	if true {
-		c.JSON(http.StatusOK, util.GetCheckErrorResult())
-	}
+	yamlConfig := config.YamlConfig
+	c.JSON(200, util.GetTrueDataResult(yamlConfig))
 }

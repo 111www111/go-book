@@ -1,7 +1,10 @@
 package main
 
-import "books/router"
+import (
+	"books/config"
+	"books/router"
+)
 
 func main() {
-	router.Gin.Run(":8080")
+	router.Gin.Run(config.YamlConfig.Server.Port)
 }

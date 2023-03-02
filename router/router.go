@@ -1,6 +1,7 @@
 package router
 
 import (
+	"books/config"
 	"books/controller"
 	err "books/error"
 	"books/geteway"
@@ -11,6 +12,9 @@ var Gin *gin.Engine
 
 func init() {
 	Gin = gin.Default()
+	//加载配置文件
+	config.Config()
+	//加载路由
 	Router()
 }
 
